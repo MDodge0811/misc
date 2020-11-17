@@ -70,16 +70,12 @@ let validUserName = (username) => {
 	const totalAcceptedCharacters = alphabet.concat(otherAcceptedCharacters);
 	const scrubbedInput = username.trim().split('');
 	if (scrubbedInput.length < 8 || scrubbedInput.length > 12) {
-		console.log(1);
 		return false;
 	} else if (!alphabet.includes(scrubbedInput[0])) {
-		console.log(2);
 		return false;
 	}
 	for (let character of scrubbedInput) {
 		if (!totalAcceptedCharacters.includes(character)) {
-			console.log(character);
-			console.log(3);
 			return false;
 		}
 	}
